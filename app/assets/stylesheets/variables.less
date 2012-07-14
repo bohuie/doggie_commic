@@ -1,7 +1,7 @@
 // Variables.less
 // Variables to customize the look and feel of Bootstrap
-// Swatch: United
-// Version: 2.0.3
+// Swatch: Journal
+// Version: 2.0.4
 // -----------------------------------------------------
 
 // GLOBAL VALUES
@@ -13,43 +13,43 @@
 @black:                 #000;
 @grayDarker:            #222;
 @grayDark:              #333;
-@gray:                  #555;
+@gray:                  #888;
 @grayLight:             #999;
-@grayLighter:           #F5F5F5;
+@grayLighter:           #eee;
 @white:                 #fff;
 
 
 // Accent colors
 // -------------------------
-@blue:                  #19B6EE;
-@blueDark:              #0064cd;
-@green:                 #38B44A;
-@red:                   #DF382C;
-@yellow:                #EFB73E;
-@orange:                #DD4814;
-@pink:                  #c3325f;
-@purple:                #772953;
+@blue:                  #369;
+@blueDark:              darken(@blue, 15%);
+@green:                 #22B24C;
+@red:                   #C00;
+@yellow:                #FCFADB;
+@orange:                #FF7F00;
+@pink:                  #CC99CC;
+@purple:                #7a43b6;
 
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
-@textColor:             @grayDark;
+@bodyBackground:        #FCFBFD;
+@textColor:             @grayDarker;
 
 
 // Links
 // -------------------------
-@linkColor:             @orange;
-@linkColorHover:        darken(@linkColor, 15%);
+@linkColor:             @textColor;
+@linkColorHover:        @gray;
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        'Ubuntu', Tahoma, sans-serif;
+@sansFontFamily:        'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
-@baseFontSize:          13px;
+@baseFontSize:          14px;
 @baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        18px;
 @altFontFamily:         @serifFontFamily;
@@ -62,7 +62,7 @@
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #f9f9f9; // for striping
+@tableBackgroundAccent:             @grayLighter; // for striping
 @tableBackgroundHover:              #f5f5f5; // for hover
 @tableBorder:                       #ddd; // table and cell border
 
@@ -76,20 +76,20 @@
 @btnPrimaryBackground:              @linkColor;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
 
-@btnInfoBackground:                 lighten(@purple, 15%);
-@btnInfoBackgroundHighlight:        @purple;
+@btnInfoBackground:                 #5bc0de;
+@btnInfoBackgroundHighlight:        #2f96b4;
 
 @btnSuccessBackground:              #62c462;
 @btnSuccessBackgroundHighlight:     #51a351;
 
-@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackground:              lighten(@orange, 10%);
 @btnWarningBackgroundHighlight:     @orange;
 
 @btnDangerBackground:               #ee5f5b;
 @btnDangerBackgroundHighlight:      #bd362f;
 
-@btnInverseBackground:              @gray;
-@btnInverseBackgroundHighlight:     @grayDarker;
+@btnInverseBackground:              @linkColor;
+@btnInverseBackgroundHighlight:     darken(@linkColor, 5%);
 
 
 // Forms
@@ -98,16 +98,17 @@
 @inputBorder:                   #ccc;
 @inputBorderRadius:             3px;
 @inputDisabledBackground:       @grayLighter;
-@formActionsBackground:         transparent;
+@formActionsBackground:         @grayLighter;
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @white;
+@dropdownBackground:            @bodyBackground;
 @dropdownBorder:                rgba(0,0,0,.2);
-@dropdownLinkColor:             @linkColor;
-@dropdownLinkColorHover:        @white;
-@dropdownLinkBackgroundHover:   @linkColor;
-
+@dropdownLinkColor:             @textColor;
+@dropdownLinkColorHover:        @textColor;
+@dropdownLinkBackgroundHover:   #eee;
+@dropdownDividerTop:            #e5e5e5;
+@dropdownDividerBottom:         @white;
 
 
 
@@ -145,15 +146,15 @@
 // Navbar
 // -------------------------
 @navbarHeight:                    40px;
-@navbarBackground:                @orange;
-@navbarBackgroundHighlight:       #CE4213;
+@navbarBackground:                @bodyBackground;
+@navbarBackgroundHighlight:       @bodyBackground;
 
-@navbarText:                      @white;
-@navbarLinkColor:                 @white;
-@navbarLinkColorHover:            @white;
+@navbarText:                      @textColor;
+@navbarLinkColor:                 @linkColor;
+@navbarLinkColorHover:            @linkColor;
 @navbarLinkColorActive:           @navbarLinkColorHover;
-@navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      @navbarBackground;
+@navbarLinkBackgroundHover:       @grayLighter;
+@navbarLinkBackgroundActive:      @grayLighter;
 
 @navbarSearchBackground:          lighten(@navbarBackground, 25%);
 @navbarSearchBackgroundFocus:     @white;
@@ -171,20 +172,20 @@
 
 // Form states and alerts
 // -------------------------
-@warningText:             #ECA918;
-@warningBackground:       lighten(@warningText, 40%);
+@warningText:             #c09853;
+@warningBackground:       #fcf8e3;
 @warningBorder:           darken(spin(@warningBackground, -10), 3%);
 
-@errorText:               #DF382C;
-@errorBackground:         lighten(@errorText, 40%);
+@errorText:               #b94a48;
+@errorBackground:         #f2dede;
 @errorBorder:             darken(spin(@errorBackground, -10), 3%);
 
-@successText:             #38B44A;
-@successBackground:       lighten(@successText, 40%);
+@successText:             #468847;
+@successBackground:       #dff0d8;
 @successBorder:           darken(spin(@successBackground, -10), 5%);
 
-@infoText:                @purple;
-@infoBackground:          lighten(@purple, 50%);
+@infoText:                #3a87ad;
+@infoBackground:          #d9edf7;
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
 
@@ -203,3 +204,4 @@
 // -------------------------
 @fluidGridColumnWidth:    6.382978723%;
 @fluidGridGutterWidth:    2.127659574%;
+
