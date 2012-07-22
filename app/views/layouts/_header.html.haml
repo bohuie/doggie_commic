@@ -10,9 +10,9 @@
 
       .nav-collapse
         %ul.nav
-          %li= link_to "About",   about_path
-          %li= link_to "Archive", archive_path 
-          %li= link_to "Contact", contact_path
+          %li= link_to "About",   about_path,   :style => 'color:#000000'
+          %li= link_to "Archive", archive_path, :style => 'color:#000000'
+          %li= link_to "Contact", contact_path, :style => 'color:#000000'
 =#        %ul.nav.pull-right
 =#          -if current_user.try(:admin?)
 =#            %li= link_to "Admin", admin_index_path
