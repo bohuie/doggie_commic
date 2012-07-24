@@ -10,6 +10,7 @@ NewApp::Application.routes.draw do
   
   namespace :admin do
     resources :users
+    resources :comics
   end
   resources :admin
 

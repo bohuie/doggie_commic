@@ -1,0 +1,19 @@
+= provide(:title, 'Edit Comic') 
+
+.page-header
+  %h1
+    Edit Comic 
+
+.right
+  = link_to 'Show Comic', admin_comic_path(@section)
+  &nbsp;
+  &nbsp;
+  = link_to 'Back to Comics Listing', admin_comics_path 
+%p
+%br
+%br
+
+= simple_form_for([:admin, @comic]) do |f| 
+  = f.error_notification 
+  = render :partial => 'form', :locals=>{:f=>f}
+

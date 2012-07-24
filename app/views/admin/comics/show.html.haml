@@ -1,0 +1,32 @@
+= provide(:title, 'Show Comic') 
+
+.page-header
+  %h1
+    Comic Details
+
+=#<p id="notice"><%= notice %></p>
+
+.pull-right
+  = link_to 'Edit Comic', edit_admin_comic_path(@section) 
+  &nbsp;
+  &nbsp;
+  = link_to 'Back to Comics Listing', admin_comics_path 
+%p
+%br
+%br
+
+%p
+  %b
+    Order:
+%p
+= @comic.order_id
+
+%br
+%br
+
+%p
+  %b
+    Title:
+%p
+= @comic.title 
+
