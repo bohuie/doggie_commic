@@ -4,7 +4,7 @@ class Panel < ActiveRecord::Base
   validates_presence_of   :order_id
   validates_uniqueness_of :order_id
 
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  has_attached_file :image, :styles => { :medium => "230x230>", :thumb => "100x100>" }
 
   belongs_to :comic
 end
