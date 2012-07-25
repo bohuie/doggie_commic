@@ -4,12 +4,13 @@
   %h1
     Archive
 
-%row
-  This is the archive page in the sample application.
-  This is the archive page in the sample application.
-  This is the archive page in the sample application.
-  This is the archive page in the sample application.
-  This is the archive page in the sample application.
+%p
+%br
+%ul 
+  - @comics.each do |comic| 
+    %li
+      = comic.title 
+    %br
 
 %p
 &nbsp;

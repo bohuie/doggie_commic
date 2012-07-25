@@ -4,7 +4,8 @@ class Admin::ComicsController < AdminController
   end
 
   def show
-    @comic = Comic.find params[:id] 
+    @comic  = Comic.find params[:id] 
+    @panels = @comic.panels
   end
 
   def new

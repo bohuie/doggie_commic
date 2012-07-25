@@ -1,0 +1,6 @@
+.center
+  %table{:width=>'100%'}
+    %tr 
+      -@panels.each do |p|
+        %td
+          = image_tag p.image.url

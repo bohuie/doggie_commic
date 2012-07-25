@@ -15,6 +15,7 @@ gem 'devise'
 gem 'will_paginate', '~> 3.0.3'
 gem 'simple_form'
 gem 'country_select'
+gem "paperclip", "~> 3.0"
 
 # Gems used only for assets and not required
 # in production environments by default.

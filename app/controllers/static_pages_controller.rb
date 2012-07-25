@@ -2,7 +2,8 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def help
+  def archive
+    @comics = Comic.all( :order => 'order_id desc' )
   end
 
   def about

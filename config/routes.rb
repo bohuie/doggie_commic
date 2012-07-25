@@ -10,7 +10,11 @@ NewApp::Application.routes.draw do
   
   namespace :admin do
     resources :users
-    resources :comics
+    resources :comics do
+      scope :module => 'comics' do
+        resources :panels
+      end
+    end
   end
   resources :admin
 

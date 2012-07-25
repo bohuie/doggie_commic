@@ -1,0 +1,12 @@
+= f.input :order_id
+
+%table
+  %tr 
+    %td{:width=>'85px'}
+    %td 
+      = file_field_tag :image, :class => 'file required'
+
+%br
+%br
+%center
+  = f.button :submit, :class => 'btn btn-primary'

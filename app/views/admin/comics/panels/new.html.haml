@@ -1,0 +1,16 @@
+= provide(:title, 'New Panel') 
+
+.page-header
+  %h1
+    Upload New Panel
+
+.pull-right
+  = link_to 'Back to Comics Listing', admin_comic_path( @comic )
+%p
+%br
+%br
+
+= simple_form_for( [:admin, @comic, @panel] , :html=>{:class=>'form-horizontal'} ) do |f| 
+  = f.error_notification 
+  = render :partial => 'form', :locals=>{:f=>f}
+
